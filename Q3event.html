@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <style>
+        .text-box {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+  }
+    </style>
+</head>
+<body>
+    <h1>Q1</h1>
+    <div class="text-box" id="myBox" onmouseover="handleMouseOver()">
+        Hello World!
+    </div>
+    <script>
+        function handleMouseOver() {
+            document.getElementById("myBox").style.backgroundColor =  "yellow";
+            document.getElementById("myBox").style.fontWeight = "bold";
+
+        }
+    </script>
+</body>
+</html>

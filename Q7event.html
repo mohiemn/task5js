@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+
+<body>
+    <h1>Q5</h1>
+    <br>
+    <select id="font-family">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Courier New">Courier New</option>
+    </select>
+    <select id="bold">
+        <option value="bold">Bold</option>
+        <option value="unbold">UnBold</option>
+    </select>
+    <select id="Underline">
+        <option value="Underline">Underline</option>
+        <option value="UNUnderline">Un Underline</option>
+    </select>
+    <select id="font-size">
+        <option value="12px">Small (12px)</option>
+        <option value="16px">Medium (16px)</option>
+        <option value="20px">Large (20px)</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <div id="text-box" contenteditable="true">
+        This is editable text!
+    </div>
+    <script>
+        const textBox            = document.getElementById('text-box');
+        const fontFamilySelect   = document.getElementById('font-family');
+        const boldButton         = document.getElementById('bold');
+        const underlineButton    = document.getElementById('Underline');
+        const fontSizeSelect     = document.getElementById('font-size');
+
+        textBox.style.fontFamily = fontFamilySelect.value;
+
+        fontFamilySelect.addEventListener('change', function () {
+            textBox.style.fontFamily = this.value;
+        });
+        boldButton.addEventListener('change', function () {
+            textBox.style.fontWeight = this.value;
+        });
+        underlineButton.addEventListener('change', function () {
+            textBox.style.underlineButton = this.value;
+        });
+        fontSizeSelect.addEventListener('change', function () {
+            textBox.style.fontSize = this.value;
+        });
+    </script>
+</body>
+
+</html>

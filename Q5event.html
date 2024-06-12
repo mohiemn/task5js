@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 : Password Validation</title>
+</head>
+
+<body>
+    <h1>Q3 : Password Validation</h1>
+    <form id="passwordForm">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <span id="passwordError"></span><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+        <span id="confirmError"></span><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const passwordForm = document.getElementById('passwordForm');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const passwordError = document.getElementById('passwordError');
+        const confirmError = document.getElementById('confirmError');
+        passwordForm.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            passwordError.textContent = "";
+            confirmError.textContent = "";
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            if (password.length < 8) {
+                passwordError.textContent = "Password is too short (minimum 8 characters)";
+                return;
+            }
+            if (password !== confirmPassword) {
+                confirmError.textContent = "Passwords do not match";
+                return; 
+            }
+            alert("Password is valid!"); 
+        });
+    </script>
+</body>
+
+</html>

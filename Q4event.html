@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+
+</head>
+
+<body>
+    <h1>Q2</h1>
+    <div class="dropdown">
+        <select id="countrySelect">
+            <option value="">Select Country</option>
+            <option value="Pal">Palastain</option>
+            <option value="Jor">Jordan</option>
+            <option value="Us">US</option>
+        </select>
+        <img id="flag" src="" alt="Flag">
+    </div>
+    <script>
+        let countrySelect = document.getElementById('countrySelect');
+        let flagImage = document.getElementById('flag');
+        let flags = {
+            Us: 'us.png',
+            Pal: 'plastain.png',
+            Jor: 'jordan.png',
+            
+        };
+
+        countrySelect.addEventListener('change', function () {
+            const selectedCountry = this.value;
+            if (selectedCountry) {
+                flagImage.src = flags[selectedCountry];
+            } else {
+                flagImage.src = ""; 
+            }
+        });
+    </script>
+</body>
+
+</html>

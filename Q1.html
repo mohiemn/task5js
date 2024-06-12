@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar and Slider</title>
+    <link rel="stylesheet" href="Q1.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#link1">Link 1</a>
+                    <a href="#link2">Link 2</a>
+                    <a href="#link3">Link 3</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="admin.png" class="slide">
+            <img src="m doc.png" class="slide">
+            <img src="gendrman.png" class="slide">
+            <img src="2021flat_27 - Copy.png" class="slide">
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <script src="Q1.js"></script>
+</body>
+</html>

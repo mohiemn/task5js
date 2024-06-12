@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+    <style>
+        #animateMe,
+        #iterateMe {
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+        }
+        #animateMe {
+            background-color: lightgreen;
+            animation: example 2s;
+        }
+        #iterateMe {
+            background-color: lightgreen;
+            animation: example 2s infinite;
+        }
+        @keyframes example {
+            from {
+                background-color: lightgreen;
+            }
+            to {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q5</h1>
+    <div id="animateMe">Animating div</div>
+    <div id="iterateMe">Animating div</div>
+    <script>
+        function handleAfterPrint() {
+            alert('Printing completed!');
+        }
+        document.getElementById('animateMe').addEventListener('animationend', function () {
+            alert('Animation ended!');
+        });
+    </script>
+
+</body>
+
+</html>
